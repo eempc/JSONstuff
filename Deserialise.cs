@@ -11,6 +11,8 @@ Console.ReadKey();
 // The JSON below is irregular, such that "status" and "data" are not the same, hence the use of the boxed variable object
 // "data" has a nested object/dictionary, "quote", hence the second deserialisation:
 // A third deserialisation is unnecessary because everything after "quote" will be regular. Even if I were to request more than one quote
+
+// string json looks like this
 {
     "status": {
         "timestamp": "2019-05-17T16:11:00.511Z",
@@ -32,4 +34,10 @@ Console.ReadKey();
             }
         }
     }
+}
+
+// string json2 looks like this
+"ETH": {
+    "price": 0.43841552086564745,
+    "last_updated": "2019-05-17T16:10:23.000Z"
 }
