@@ -2,9 +2,9 @@ using Newtonsoft.Json;
 
 string json = @"{some JSON}";
 var json1 = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(json);
-var json2 = json1["data"]["quote"].ToString();
+var json2 = json1["data"]["quote"].ToString(); // This will yield the "ETH" object
 var json3 = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(json2);
-var json4 = json3["ETH"]["price"];
+var json4 = json3["ETH"]["price"]; // This will get me the target, the price of 0.438
 Console.WriteLine((double)json4);
 Console.ReadKey();
 
