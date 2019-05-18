@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 string json = @"{some JSON}";
-Dictionary<string, Dictionary<string, object>> json1 = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(json);
+var json1 = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(json);
 string json2 = json1["data"]["quote"].ToString(); // This will yield the "ETH" object
 Dictionary<string, Dictionary<string, object>> json3 = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(json2);
 double json4 = (double)json3["ETH"]["price"]; // This will get me the target, the price of 0.438
