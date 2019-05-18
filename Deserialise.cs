@@ -9,7 +9,7 @@ Console.WriteLine((double)json4);
 Console.ReadKey();
 
 // The JSON below is irregular, such that "status" and "data" are not the same, hence the use of the boxed variable object
-// "data" has a nested object/dictionary, "quote" hence the second deserialisation:
+// "data" has a nested object/dictionary, "quote", hence the second deserialisation:
 // A third deserialisation is unnecessary because everything after "quote" will be regular. Even if I were to request more than one quote
 {
     "status": {
