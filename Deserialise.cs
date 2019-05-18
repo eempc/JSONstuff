@@ -11,6 +11,12 @@ double target = (double)json3["ETH"]["price"]; // This will get me the target, t
 Console.WriteLine(target);
 Console.ReadKey();
 
+// This is the helper method
+
+public static Dictionary<string, Dictionary<string, object>> ParseJson(string json) {
+    return JsonConvert.DeserializeObject <Dictionary<string, Dictionary<string, object>>>(json);
+}
+
 // The JSON below is irregular, such that "status" and "data" are not the same, hence the use of the boxed variable object
 // "data" has a nested object/dictionary, "quote", hence the second deserialisation:
 // A third deserialisation is unnecessary because everything after "quote" will be regular. Even if I were to request more than one quote
